@@ -1,29 +1,23 @@
-import { useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Home from "./components/Home";
 import Prediction from "./components/Prediction";
 
 function App() {
-  const [user, setUser] = useState<WebAppUser>();
-
-  useEffect(() => {
-    const tg = window.Telegram.WebApp;
-    tg.ready();
-    tg.expand();
-
-    // Fetch user info from Telegram context if available
-    const initDataUnsafe = tg.initDataUnsafe;
-    if (initDataUnsafe.user) {
-      setUser(initDataUnsafe.user);
-    }
-  }, []);
-
   return (
-    <div className="App">
-      <h1>Prediction App</h1>
-      {user && <h2>Welcome, {user.first_name}!</h2>}
-      <Prediction />
-      <button onClick={() => window.Telegram.WebApp.close()}>Close App</button>
+    <div className="flex justify-center min-h-screen bg-homebackground py-20 px-5">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/prediction" element={<Prediction />} />
+      </Routes>
     </div>
   );
 }
 
-export default App;
+const WrappedApp = () => (
+  <Router>
+    <App />
+  </Router>
+);
+
+export default WrappedApp;
