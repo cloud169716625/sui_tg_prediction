@@ -8,7 +8,7 @@ function Home() {
   };
 
   return (
-    <div className="max-w-[650px]">
+    <div className="max-w-[650px] bg-homebackground py-20 px-5">
       <div className="flex flex-row">
         <img src="./images/main-logo.svg" alt="" />
         <span className="font-darkGrot text-3xl text-white">Predict Wise</span>
