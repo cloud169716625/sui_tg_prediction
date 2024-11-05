@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "./components/Home";
 import Prediction from "./components/Prediction";
+import Lottery from "./components/Lottery";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/prediction" element={<Prediction />} />
+        <Route path="/lottery" element={<Lottery />} />
       </Routes>
     </div>
   );

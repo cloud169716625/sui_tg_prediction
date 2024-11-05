@@ -72,7 +72,7 @@ function Prediction() {
           <img src="./images/multi-coin.svg" alt="coin" />
         </div>
       </div>
-      <Bottom />
+      <Bottom activeIndex={1} />
     </div>
   );
 }

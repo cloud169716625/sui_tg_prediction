@@ -13,6 +13,7 @@ export default {
         bluePrimary: "#732669",
         grayPrimary: "#09EAB5",
         greenPrimary: "#08C498",
+        activeGreen: "#04624C",
         pinkBorder: "#9A328C",
         buttonBg: "#C858B9",
       },
