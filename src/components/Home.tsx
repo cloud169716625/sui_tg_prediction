@@ -6,7 +6,6 @@ function Home() {
   const handlePrediction = () => {
     navigate("/prediction");
   };
-  console.log("test");
   return (
     <div className="max-w-[650px] bg-homebackground py-20 px-5">
       <div className="flex flex-row">
